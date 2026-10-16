@@ -1,0 +1,14 @@
+[window]
+
+decorations = "none"
+startup_mode = "Fullscreen"
+
+[font]
+
+size = 20.00
+
+[[keyboard.bindings]]
+
+key = "Escape"
+mods = "Control"
+action = "ToggleViMode"
