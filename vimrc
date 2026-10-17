@@ -32,6 +32,7 @@ filetype plugin indent on    " required
 set encoding=utf-8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" PYTHON SECTION
 
 au BufNewFile,BufRead *.py
     \set tabstop=4
@@ -41,6 +42,16 @@ au BufNewFile,BufRead *.py
     \set expandtab
     \set autoindent
     \set fileformat=unix
+
+"python scripts runner
+
+command! Rp write | ! clear ; python3 %
+
+""?
+
+let python_highlight_all=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Enable Folding
 
@@ -57,9 +68,6 @@ au BufNewFile,BufRead *.py
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.cpp match BadWhitespace /\s\+$/
 highlight BadWhitespace ctermbg=red guibg=darkred
 
-""?
-
-let python_highlight_all=1
 
 ""set some more thing that make vim env better
 
