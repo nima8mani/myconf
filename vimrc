@@ -13,6 +13,8 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'yegappan/taglist'
+Plugin 'fs111/pydoc.vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
@@ -45,7 +47,7 @@ au BufNewFile,BufRead *.py
 
 "python scripts runner
 
-command! Rp write | ! clear ; python3 %
+command! RP write | ! clear ; python3 %
 
 ""?
 
@@ -93,3 +95,6 @@ set ic
 ""normally search without worrying about capitalization
 
 set sc
+
+filetype on            " enables filetype detection
+filetype plugin on     " enables filetype specific plugins
